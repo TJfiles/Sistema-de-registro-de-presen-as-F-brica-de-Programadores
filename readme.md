@@ -58,7 +58,7 @@ SUPABASE_URL=[SEU-COMMIT-LINK-DO-SUPABASE]
 SUPABASE_KEY=[SUA-CHAVE-DO-SUPABASE]
 ```
 ### 4. Crie uma tabela chamada Presenca no Supabase conforme a imagem
-![alt text](image-1.png)
+![Tabela Supabase](tabela.png)
 
 ### 5. Liste todos os seus alunos e turmas em um arquivo .csv conforme o exemplo
 ```bash
