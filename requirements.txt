@@ -1,0 +1,4 @@
+streamlit==1.57.0
+supabase==2.0.30
+pandas==3.0.3
+dotenv==0.9.9
