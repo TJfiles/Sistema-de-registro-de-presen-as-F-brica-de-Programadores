@@ -17,7 +17,7 @@ class Banco(object):
 
     def __init__(self):
         self.alunos = pd.read_csv('dados/alunos.csv')
-        self.tabela = "Presenca_teste"
+        self.tabela = "Presenca"
         self.turmas = pd.read_csv('dados/alunos.csv')['turma'].unique().tolist()
 
     
