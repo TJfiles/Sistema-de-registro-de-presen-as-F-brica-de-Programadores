@@ -16,9 +16,10 @@ supabase: Client = create_client(
 class Banco(object):    
 
     def __init__(self):
-        self.alunos = pd.read_csv('dados/alunos.csv')
+        # self.alunos = pd.read_csv('dados/alunos.csv')
+        self.alunos = pd.DataFrame(supabase.table('Alunos').select('*').execute().data)
         self.tabela = "Presenca"
-        self.turmas = pd.read_csv('dados/alunos.csv')['turma'].unique().tolist()
+        self.turmas = self.alunos['turma'].unique().tolist()
 
     
     def inserir(self, aluno, turma):
@@ -45,5 +46,9 @@ class Banco(object):
     
     def consulta_turma_aluno(self, turma, aluno):
         
-        response = supabase.table(self.tabela).select("*").eq('turma', turma).eq('aluno', aluno).execute()
-        return pd.DataFrame(response.data)
+        response = supabase.table(self.tabela).select("*").eq('turma', turma).eq('aluno', aluno).execute().data
+        if len(response) == 0:
+            return None
+        else:
+            return pd.DataFrame(response).sort_values(['mes', 'dia'])
+

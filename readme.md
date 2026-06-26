@@ -29,7 +29,6 @@ Sistema para registro de presença dos alunos dos cursos da Fábrica de Programa
 
 ```bash
 📦 Sistema-presenca
-├── dados/
 ├── app.py
 ├── banco_alunos.py
 ├── requirements.txt
@@ -58,13 +57,10 @@ SUPABASE_URL=[SEU-COMMIT-LINK-DO-SUPABASE]
 SUPABASE_KEY=[SUA-CHAVE-DO-SUPABASE]
 ```
 ### 4. Crie uma tabela chamada Presenca no Supabase conforme a imagem
-![Tabela Supabase](tabela.png)
+![Tabela Presença](tabela_presencas.png)
 
-### 5. Liste todos os seus alunos e turmas em um arquivo .csv conforme o exemplo
-```bash
-id,turma,nome_aluno
-1,Terça e Quarta - Manhã, Aluno Teste
-```
+### 5. Crie uma tabela chamada Alunos no Supabase conforme a imagem
+![Tabela Alunos](tabela_alunos.png)
 
 ---
 

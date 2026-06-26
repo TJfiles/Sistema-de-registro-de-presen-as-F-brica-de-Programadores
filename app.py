@@ -77,5 +77,8 @@ with historico:
     aluno = st.selectbox('Aluno(a):',lista_original)
 
     consulta_aluno = banco.consulta_turma_aluno(turma, aluno)
-    
-    st.write(consulta_aluno)
+    if consulta_aluno is not None:
+        st.write(consulta_aluno)
+    else:
+        
+        st.write("Aluno sem presença registrada")
